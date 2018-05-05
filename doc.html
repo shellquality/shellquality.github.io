@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>goodShell.</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav>
+		<h1><u>goodShell</u> - Programming to People</h1>
+	</nav>
+	<ul class="menu">
+		<li class="menuli"><a href="index.html">Home</a></li>
+		<li class="menuli"><a href="doc.html">Documentação</a></li>
+		<li class="menuli"><a href="https://raw.githubusercontent.com/shellbase/shellbase.github.io/master/template">Template</a></li>	
+		<li class="menuli"><a href="faq.html">FAQ</a></li>
+		<li class="menuli"><a href="contato.html">Contato</a></li>	
+	</ul>
+
+<div id="all">
+
+<h2>Sumário</h2>
+	<ul>
+	<li><a href="#toc0">O que é?</a></li>
+	<li><a href="#toc1">Norma Shell Quality</a></li>
+	<li><a href="#toc2">Entrada</a></li>
+	<li><a href="#toc3">Cabeçalho</a></li>
+	<li><a href="#toc4">Corpo-Inicial</a></li>
+	<li><a href="#toc5">Separador</a></li>
+</ul>
+
+<hr>
+
+
+<h2><a name="toc0">O que é?</a></h2>
+<p>Em linguagens de Script normalmente não seguimos um padrão preestabelecido de normas a serem seguidas, em Shell  não é diferente.<br/>
+Por não seguir nenhuma norma acaba que os programas fiquem bagunçados/desleixados, sem nenhum regra exposta, cada Shelleiro impõe a sua própria regra. Isto se podemos chamar de programas, muitas vezes estes programas possuem uma lógica boa e funcional, porem são simples scripts descartáveis.<br/>
+Em muitos casos os próprios programadores não conseguem fazer leituras posteriormente de seus próprios programas, programadores que veem de fora para cooperar no desenvolvimento ou simplesmente forkar se descabelam.<br/>
+Leigos ficam perdidos com tantas implementações que cada programador impõe em seus próprios programas...</p>
+
+<p>A Shell Quality veio para suprir isto, assim criando um Modelo padronizado a ser seguido, fornecendo um template base para seus programas e scripts, facilitando a vida dos programadores e pessoas entusiastas a programação.</p>
+
+<hr>
+
+<h2><a name="toc1">Norma Shell Quality</a></h2>
+
+<p>Se o Autor/Autores determinarem que o programa está sob a norma de padronização Shell Quality o programa deverá se manter com a norma preestabelecida, a não ser que o Autor/Autores resolvam revogar.</p>
+
+<hr>
+
+<h2><a name="toc2"></a>Entrada</h2>
+
+<h3>Shebang</h3>
+<p>A Shebang não deve ser o caminho absoluto...<br/>
+Chamamos o caminho completo do comando env e ele próprio irá se encarregar de encontrar!</p>
+
+<p class="code">
+/bin/bash          [ERRADO]<br/>
+/bin/sh	           [ERRADO]<br/>
+/bin/fish          [ERRADO]<br/>
+/usr/bin/env bash  <b>[CORRETO]</b><br/>
+/usr/bin/env sh    <b>[CORRETO]</b><br/>
+/usr/bin/env fish  <b>[CORRETO]</b><br/>
+</p>
+
+
+<h3>Super Tag</h3>
+<p>A super tag '<Shell Base>' fica logo abaixo da Shebang, a tag é necessária indicando que o programa/script segue as normas estabelecidas pela Shell Quality - Programming to People, e devem seguir o padrão que foi estabelicido pelo autor.</Shell>
+
+<p class="code"><b>#<@Shell Quality></b></p>
+
+
+<hr>
+
+
+<h2><a name="toc3">Cabeçalho</a></h2>
+
+<h3>Box</h3>
+
+<p>O box é formado por uma linha inicial e final de 80 colunas não devendendo ser ultrapassada.
+Na linha inicial em Qualquer parte ao decorrer da linha faça a chamada do 'HEADER'</p>
+
+<p class="code">
+#============<b>HEADER</b>===========================================================|<br/>
+#<br/>
+#=============================================================================|<br/>
+</p>
+
+<p>Dentro devem conter informações primordiais do programa/script seguindo uma ordem.</p>
+
+<p><b>AUTOR</b><br/>
+Nome do Autor principal do programa, deve seguir 'Nome/Nick' seguido por 'email'</p>
+
+
+<p><b>MANTENEDORES</b><br/>
+Nome do(s) Mantendedor(es), ***Está informação é válida se caso existir contribuintes para o seu programa.<br/>
+<i>***Caso seu programa não possui mantenedores, a chamada é OPCIONAL.</i></p>
+
+
+<p><b>PROGRAMA</b><br/>
+Nome do Programa</p>
+
+<p><b>LICENÇA</b><br/>
+Licença do programa, pode conter um link externo ou em linha
+<i>***Caso o programa não esteja licenciado, a chamada é OPCIONAL</i></p>
+
+<p><b>VERSÃO</b><br/>
+Versão do Programa</p>
+
+<p><b>DESCRIÇÃO-CURTA</b><br/>
+Curta Descrição do programa</p>
+
+<p><b>DESCRIÇÃO</b><br/>
+Descrição completa do programa</p>
+
+<p><b>NOTA</b>
+Se caso houver alguma nota, como por exemplo ensinando o que se dever ser feito antes de iniciar o programa, o faça aqui.<br/>
+<i>***Caso seu programa não possui nenhuma nota que é interessante para o usuário, a chamada é OPCIONAL.</i></p>
+
+<p><b>HOMEPAGE</b>
+Se caso houver expecifique a página do projeto, como por exemplo (Notabug, Github).<br/>
+<i>***Caso seu programa não ter um site, ou não é hospedado em nenhum lugar, a chamada é OPCIONAL.</i></p>
+
+<p><b>CHANGELOG</b>
+Todas modificações do programa deversão estar aqui, pode ser externa como por exemplo em uma página HTML ou em Texto plano.
+Caso deseje você pode expecificar neste bloco embutido.</p>
+
+
+<hr>
+
+
+<h2><a name="toc4">Corpo Inicial</a></h2>
+
+
+<b>VAR-BOX</b><br/>
+
+<p>Após a 'Entrada/Cabeçalho' vem a parte do corpo inicial, basicamente fazemos as chamadas em ordens, iniciando com a chamada das váriaveis 'Globais' do programa, como por exemplo (Nome, Versão, Diretorios, Log) etc...<br/>
+Todas váriaveis precisam ficar dentro de um simples box seguindo o mesmo modelo do 'Cabeçalho', porem em menor escala "45 Colunas", o box PODE ser ultrapassado!</p>
+<p class="code">
+#=========<b>VARIAVEIS</b>==========================|<br/>
+#<br/>
+#==========================================|<br/>
+</p>
+
+<b>TEST-BOX</b> <i>(OPCIONAL)</i><br/>
+
+<p>Todos os testes 'Globais' do programa devem ser mantidos aqui.
+Exemplo (Usuário é root?, Programa existe no sistema?, Usuário tem internet?, Dispositivo está montado?) etc...</p>
+
+<p class="code">
+#=========<b>TESTES</b>===========================|<br/>
+#<br/>
+#==========================================|<br/>
+</p>
+
+<b>LIBRARY-BOX</b><br/>
+
+<p>Todas bibliotecas externas 'Globais' deverão ser mantidos aqui
+Exemplo (Biblioteca de funções)</p>
+
+<p class="code">
+#=========<b>BIBLIOTECA</b>========================|<br/>
+#<br/>
+#==========================================|<br/>
+</p>
+
+
+<b>FUNCTIONS-BOX</b><br/>
+
+<p>Se caso o programa possui funções deverão ser feito as suas chamadas dentro deste box.</p>
+
+<p class="code">
+#=========<b>FUNCOES</b>==========================|<br/>
+#<br/>
+#==========================================|<br/>
+</p>
+
+
+<hr>
+
+<h2><a name="toc5">Separador</a></h2>
+
+
+<p>A linha separadadora é a responsável por separar o 'Entrada' 'Cabeçalho' 'Corpo Inicial' do programa em Si.<br/>
+Este separador deve ter '80 Colunas'.</p>
+
+<p class="code">###############################################################################</p>
+
+</div>
+</body>
+</html>
