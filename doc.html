@@ -7,12 +7,12 @@
 </head>
 <body>
 	<nav>
-		<h1><u>goodShell</u> - Programming to People</h1>
+		<h1>good<b class="gray">Shell</b> - Programming to People</h1>
 	</nav>
 	<ul class="menu">
 		<li class="menuli"><a href="index.html">Home</a></li>
 		<li class="menuli"><a href="doc.html">Documentação</a></li>
-		<li class="menuli"><a href="https://raw.githubusercontent.com/shellquality/shellquality.github.io/master/template">Template</a></li>	
+		<li class="menuli"><a href="https://raw.githubusercontent.com/shellquality/shellquality.github.io/master/template">Template</a></li>
 		<li class="menuli"><a href="faq.html">FAQ</a></li>
 		<li class="menuli"><a href="contato.html">Contato</a></li>	
 	</ul>
@@ -88,6 +88,7 @@ Na linha inicial em Qualquer parte ao decorrer da linha faça a chamada do 'HEAD
 
 <p>Dentro devem conter informações primordiais do programa/script seguindo uma ordem.</p>
 
+<ul>
 <p><b>AUTOR</b><br/>
 Nome do Autor principal do programa, deve seguir 'Nome/Nick' seguido por 'email'</p>
 
@@ -125,6 +126,7 @@ Se caso houver expecifique a página do projeto, como por exemplo (Notabug, Gith
 Todas modificações do programa deversão estar aqui, pode ser externa como por exemplo em uma página HTML ou em Texto plano.
 Caso deseje você pode expecificar neste bloco embutido.</p>
 
+</ul>
 
 <hr>
 
@@ -142,13 +144,13 @@ Todas váriaveis precisam ficar dentro de um simples box seguindo o mesmo modelo
 #==========================================|<br/>
 </p>
 
-<b>TEST-BOX</b> <i>(OPCIONAL)</i><br/>
 
-<p>Todos os testes 'Globais' do programa devem ser mantidos aqui.
-Exemplo (Usuário é root?, Programa existe no sistema?, Usuário tem internet?, Dispositivo está montado?) etc...</p>
+<b>FUNCTIONS-BOX</b><br/>
+
+<p>Se caso o programa possui funções deverão ser feito as suas chamadas dentro deste box.</p>
 
 <p class="code">
-#=========<b>TESTES</b>===========================|<br/>
+#=========<b>FUNCOES</b>==========================|<br/>
 #<br/>
 #==========================================|<br/>
 </p>
@@ -165,14 +167,15 @@ Exemplo (Biblioteca de funções)</p>
 </p>
 
 
-<b>FUNCTIONS-BOX</b><br/>
+<b>TEST-BOX</b> <i>(OPCIONAL)</i><br/>
 
-<p>Se caso o programa possui funções deverão ser feito as suas chamadas dentro deste box.</p>
+<p>Todos os testes 'Globais' do programa devem ser mantidos aqui.
+Exemplo (Usuário é root?, Programa existe no sistema?, Usuário tem internet?, Dispositivo está montado?) etc...</p>
 
 <p class="code">
-#=========<b>FUNCOES</b>==========================|<br/>
-#<br/>
-#==========================================|<br/>
+&nbsp#=========<b>TESTES</b>===========================|<br/>
+&nbsp#<br/>
+&nbsp#==========================================|<br/>
 </p>
 
 
